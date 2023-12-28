@@ -1,14 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import EmployeeJson from './employee.json';
+
+interface EMPLOYEE {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  Employees: EMPLOYEE[] = EmployeeJson;
+
+  constructor() {
+    console.log(this.Employees);
+  }
 }
+
+@NgModule({
+  declarations: [],
+  imports: [CommonModule, FormsModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
