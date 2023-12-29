@@ -1,0 +1,62 @@
+/* app.component.scss */
+
+.container {
+    margin-top: 5rem;
+  }
+  
+  h1 {
+    color: #1976d2; /* Material Blue - You can choose your preferred color */
+  }
+  
+  .mat-elevation-z8 {
+    border: 1px solid #ff99c5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+  
+    /* Add hover effect to the table */
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .mat-header-cell {
+    background-color: #2196f3;
+    color: white;
+  
+    
+    &:hover {
+      background-color: #1565c0; 
+    }
+  }
+  
+  .mat-cell {
+    background-color: #4937a6; 
+  
+    
+    &:hover {
+      background-color: #9e2323; 
+    }
+  }
+  
+  .mat-row:nth-child(odd) .mat-cell {
+    background-color: #8bd36e; 
+  }
+  
+  .mat-paginator {
+    margin-top: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
